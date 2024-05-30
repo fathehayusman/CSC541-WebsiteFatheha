@@ -4,7 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="CSS/photoGalleryStyle.css">
+	<style>
+		/* General Styles */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f7eaf2;
+    margin: 0;
+    background-image: url('bg.png'); /* Path to your sprinkle image */
+    background-size: 250px; /* Adjust the size of the sprinkle pattern */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1:hover, 
+header h3:hover {
+    color: #ff69b4;
+}
+
+/* Gallery container Styles*/
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Gallery Styles*/
+.gallery {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: auto; /* Adjust the height to fit the content */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Images within the gallery Styles*/
+.gallery img {
+    width: 150px;
+    height: 130px;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.3s ease;
+    margin: 5px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Styles*/
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Modal content styling */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Limit the maximum width of the modal image */
+    max-height: 90%; /* Limit the maximum height of the modal image */
+    width: auto; /* Set width to auto */
+    height: auto; /* Set height to auto */
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Close button styling for modal */
+.close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navigation menu styling */
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #FFC0CB; /* Pastel pink circle background */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #F68FA1; /* Darker pink on hover */
+}
+	</style>
 </head>
 <body>
 <header>
